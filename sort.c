@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 int tmp[100000];
 
 void merge(int A[], int p, int q, int r) {
@@ -65,7 +66,9 @@ int main() {
 
 	for (int i = 0; i < 10; i++) {
 		mergeInput[i] = rand();
-		quickInput[i] = rand();
+	}
+	for (int i = 0; i < 10; i++) {
+		quickInput[i] = mergeInput[i];
 	}
 	mergeSort(mergeInput,0, 9);
 	printf("Merge Sort : ");
